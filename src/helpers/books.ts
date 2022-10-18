@@ -32,11 +32,4 @@ const bookList = [
   },
 ];
 
-export const bookMap = {
-  "0": bookList[0],
-  "1": bookList[1],
-  "2": bookList[2],
-  "3": bookList[3],
-}
-
 export default bookList;

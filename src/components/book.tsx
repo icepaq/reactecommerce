@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-export default function Book({ title, description, image, click, id }: any) {
+export default function Book({ title, description, image, id }: any) {
   return (
-    <div onClick={click}>
+    <div>
       <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm w-[1000px] h-auto m-1">
         <div className="flex justify-space-between">
           <div className="w-96 ">

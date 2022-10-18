@@ -6,7 +6,6 @@ import { Provider } from "react-redux";
 import books from "../helpers/books";
 
 export default function HomeWrapper() {
-  const dispatch = useDispatch();
 
   return (
     <div>
@@ -16,7 +15,7 @@ export default function HomeWrapper() {
       </div>
       <div className="flex flex-row flex-wrap justify-center">
         <Book
-          click={() => dispatch(addBook({}))}
+          key={"KEY_featured"}
           title={"Diary of a Wimpy Kid"}
           description={
             "Greg Heffley and his family hit the road for a cross-country camping trip, ready for the adventure of a lifetime."
@@ -33,7 +32,6 @@ export default function HomeWrapper() {
         {books.map((book, index) => (
           <Book
             key={book.title}
-            onClick={() => dispatch(addBook(book))}
             title={book.title}
             description={book.description}
             image={book.image}

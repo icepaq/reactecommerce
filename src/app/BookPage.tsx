@@ -3,9 +3,8 @@ import { incrementByAmount, addBook } from "./counterSlice";
 import book from "../helpers/books";
 
 const BookPage = ({ bookId }: any) => {
-  const dispatch = useDispatch();
-  const count = useSelector((state: any) => state.counter.value)
 
+  const dispatch = useDispatch();
 
   return (
     <div className="m-10">
@@ -20,8 +19,8 @@ const BookPage = ({ bookId }: any) => {
 
           <div
             onClick={() => {
-              dispatch(incrementByAmount(book[bookId].price));
-              dispatch(addBook(book[bookId]));
+              dispatch(incrementByAmount(book[bookId].price)); // increment the total price
+              dispatch(addBook(book[bookId])); // add the book to the cart
             }}
             className="mt-2 px-[25px] py-[10px] bg-blue-300 w-fit cursor-pointer"
           >
