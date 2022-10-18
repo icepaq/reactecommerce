@@ -3,7 +3,7 @@ import BookPage from "../app/BookPage";
 import store from "../app/store";
 import { Provider } from "react-redux";
 
-const BookWrapper = () => {
+export default function BooksWrapper(){
   const params = useParams();
 
   return (
@@ -12,5 +12,3 @@ const BookWrapper = () => {
     </Provider>
   );
 };
-
-export default BookWrapper;

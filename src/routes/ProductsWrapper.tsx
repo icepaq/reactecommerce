@@ -3,7 +3,7 @@ import store from "../app/store";
 import { Provider } from "react-redux";
 import Products from '../app/Products'
 
-function App() {
+export default function ProductsWrapper() {
   return (
     <Provider store={store}>
       <div className="App">
@@ -12,5 +12,3 @@ function App() {
     </Provider>
   );
 }
-
-export default App;

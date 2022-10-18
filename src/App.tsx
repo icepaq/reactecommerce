@@ -1,8 +1,7 @@
 import * as React from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
-import Cart from './routes/Cart';
+import CartWrapper from './routes/CartWrapper';
 import ProductsWrapper from "./routes/ProductsWrapper";
-import Product from "./routes/product";
 import BookWrapper from "./routes/BookWrapper";
 
 export default function App() {
@@ -11,7 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<ProductsWrapper />} />
-          <Route path="checkout" element={<Cart />} />
+          <Route path="checkout" element={<CartWrapper />} />
           <Route path="product" element={<ProductsWrapper />} />
           <Route path="*" element={<NoMatch />} />
           <Route path="book/:id" element={<BookWrapper />} />
