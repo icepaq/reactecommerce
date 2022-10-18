@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Book({ title, description, image, click, id }: any) {
   return (
     <div onClick={click}>
@@ -11,11 +13,11 @@ export default function Book({ title, description, image, click, id }: any) {
               {title}
             </h5>
             <p className="text-gray-700 text-base mb-4">{description}</p>
-            <a href={`book/${id}`}>
+            <Link to={`book/${id}`}>
               <button className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase shadow-md ">
                 Buy Now
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

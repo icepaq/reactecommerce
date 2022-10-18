@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { incrementByAmount } from "./counterSlice";
+import { incrementByAmount, addBook } from "./counterSlice";
 import book from "../helpers/books";
 
 const BookPage = ({ bookId }: any) => {
@@ -21,6 +21,7 @@ const BookPage = ({ bookId }: any) => {
           <div
             onClick={() => {
               dispatch(incrementByAmount(book[bookId].price));
+              dispatch(addBook(book[bookId]));
             }}
             className="mt-2 px-[25px] py-[10px] bg-blue-300 w-fit cursor-pointer"
           >
