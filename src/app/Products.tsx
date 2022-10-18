@@ -1,7 +1,7 @@
 import Book from "../components/book";
-import { addBook } from "../app/counterSlice";
+import { addBook } from "./counterSlice";
 import { useSelector, useDispatch } from "react-redux";
-import store from "../app/store";
+import store from "./store";
 import { Provider } from "react-redux";
 import books from "../helpers/books";
 
