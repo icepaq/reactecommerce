@@ -1,7 +1,7 @@
 export default function Book({ title, description, image, click }: any) {
   return (
     <div onClick={click}>
-        <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm w-[1000px] h-[270px] m-1">
+        <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm w-[1000px] h-auto m-1">
           <div className="flex justify-space-between">
             <div className="w-96 ">
               <img src={image} alt="diary" />
@@ -14,7 +14,7 @@ export default function Book({ title, description, image, click }: any) {
                 {description}
               </p>
               <button className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase shadow-md ">
-                Button
+                Buy Now
               </button>
             </div>
           </div>
