@@ -1,18 +1,20 @@
 import * as React from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Checkout from './routes/checkout';
-import HomeWrapper from "./routes/HomeWrapper";
+import ProductsWrapper from "./routes/ProductsWrapper";
 import Product from "./routes/product";
+import BookWrapper from "./routes/BookWrapper";
 
 export default function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<HomeWrapper />} />
+          <Route index element={<ProductsWrapper />} />
           <Route path="checkout" element={<Checkout />} />
-          <Route path="product" element={<Product />} />
+          <Route path="product" element={<ProductsWrapper />} />
           <Route path="*" element={<NoMatch />} />
+          <Route path="book/:id" element={<BookWrapper />} />
         </Route>
       </Routes>
     </div>
