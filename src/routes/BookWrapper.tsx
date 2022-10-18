@@ -1,15 +1,16 @@
 import { useParams } from "react-router-dom";
 import BookPage from "../app/BookPage";
+import store from "../app/store";
+import { Provider } from "react-redux";
 
 const BookWrapper = () => {
-
   const params = useParams();
 
   return (
-    <div>
+    <Provider store={store}>
       <BookPage bookId={params.id} />
-    </div>
-  )
-}
+    </Provider>
+  );
+};
 
-export default BookWrapper
+export default BookWrapper;

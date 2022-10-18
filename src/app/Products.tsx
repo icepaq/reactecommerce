@@ -22,6 +22,7 @@ export default function HomeWrapper() {
             "Greg Heffley and his family hit the road for a cross-country camping trip, ready for the adventure of a lifetime."
           }
           image={"/diary.jpg"}
+          id={0}
         />
       </div>
 
@@ -29,13 +30,14 @@ export default function HomeWrapper() {
         Other Selections
       </div>
       <div className="flex justify-around flex-wrap">
-        {books.map((book) => (
+        {books.map((book, index) => (
           <Book
             key={book.title}
             onClick={() => dispatch(addBook(book))}
             title={book.title}
             description={book.description}
             image={book.image}
+            id={index}
           />
         ))}
       </div>

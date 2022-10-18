@@ -4,6 +4,7 @@ const bookList = [
     description:
       "Greg Heffley and his family hit the road for a cross-country camping trip, ready for the adventure of a lifetime.",
     image: "/diary.jpg",
+    price: 10,
   },
 
   {
@@ -11,6 +12,7 @@ const bookList = [
     description:
       "Chriss Voss, an ex-FBI hostage negotiator, shares his strategies for success in business and personal negotiations.",
     image: "/neversplit.jpg",
+    price: 15,
   },
 
   {
@@ -18,6 +20,7 @@ const bookList = [
     description:
       "What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not!",
     image: "/richdad.jpg",
+    price: 30,
   },
 
   {
@@ -25,6 +28,7 @@ const bookList = [
     description:
       "Jordan Belfort reveals the step-by-step sales and persuasion system proven to turn anyone into a sales-closing, money-earning rock star.",
     image: "/wolf.jpg",
+    price: 25,
   },
 ];
 
