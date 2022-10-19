@@ -47,7 +47,7 @@ const Cart = () => {
       found.quantity = quantity;
     }
 
-    // Iterate over _uniqeueBooks. For each book, add it to the books array times the quantitity property
+    // Iterate over _uniqueBooks. For each book, add it to the books array times the quantitity property
     const _books: any = [];
     _uniqueBooks.map((book: any) => {
       for (let i = 0; i < book.quantity; i++) {
