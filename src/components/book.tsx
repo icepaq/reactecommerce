@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Book({ title, description, image, id, author }: any) {
   return (
-    <Link to={`book/${id}`}>
+    <Link to={`/book/${id}`}>
 
     <div>
       <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm w-[1000px] h-auto m-1">

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Book from "../components/book";
 
 export default function HomeWrapper() {
@@ -17,6 +18,11 @@ export default function HomeWrapper() {
           author={"Jeff Kinney"}
         />
       </div>
+      <Link to={"product"}>
+        <div className="mt-5 text-center text-xl bg-cyan-200 w-fit m-auto px-5 py-2 rounded cursor-pointer">
+          Other Selections
+        </div>
+      </Link>
     </>
   );
 }
