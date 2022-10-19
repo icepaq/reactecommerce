@@ -16,6 +16,12 @@ export const counterSlice = createSlice({
     incrementByAmount: (state, action) => {
       state.value += action.payload
     },
+    setTotal: (state, action) => {
+      state.value = action.payload
+    },
+    setBooks: (state, action) => {
+      state.books = action.payload
+    },
     addBook: (state, action) => {
       state.books.push(action.payload)
     }
@@ -23,6 +29,6 @@ export const counterSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { incrementByAmount, addBook } = counterSlice.actions
+export const { incrementByAmount, addBook, setBooks, setTotal } = counterSlice.actions
 
 export default counterSlice.reducer

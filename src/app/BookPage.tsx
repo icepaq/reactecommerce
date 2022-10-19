@@ -1,6 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { incrementByAmount, addBook } from "./counterSlice";
 import book from "../helpers/books";
+import Swal from "sweetalert2";
 
 const BookPage = ({ bookId }: any) => {
 
@@ -21,6 +22,10 @@ const BookPage = ({ bookId }: any) => {
             onClick={() => {
               dispatch(incrementByAmount(book[bookId].price)); // increment the total price
               dispatch(addBook(book[bookId])); // add the book to the cart
+              Swal.fire({
+                title: "Added to cart!",
+                icon: "success",
+              })
             }}
             className="mt-2 px-[25px] py-[10px] bg-blue-300 w-fit cursor-pointer"
           >
