@@ -14,6 +14,7 @@ const BookPage = ({ bookId }: any) => {
       <div className="flex flex-row justify-around">
         <div className="w-[500px] h-auto m-3">
           <h1 className="text-2xl font-bold">{book[bookId].title}</h1>
+          <p className="mb-2 text-gray-500">{book[bookId].author}</p>
           <p className="">{book[bookId].description}</p>
         </div>
         <div className="w-[200px] h-auto">
