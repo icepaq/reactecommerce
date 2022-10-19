@@ -22,6 +22,7 @@ export default function HomeWrapper() {
           }
           image={"/diary.jpg"}
           id={0}
+          author={"Jeff Kinney"}
         />
       </div>
 
@@ -36,6 +37,7 @@ export default function HomeWrapper() {
             description={book.description}
             image={book.image}
             id={index}
+            author={book.author}
           />
         ))}
       </div>
