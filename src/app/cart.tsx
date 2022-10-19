@@ -29,8 +29,13 @@ const Cart = () => {
     setUniqueBooks(_uniqueBooks);
   }, []);
 
+  useEffect(() => {
+    reCalculateTotal();
+  }, [uniqueBooks]);
+
   const reCalculateTotal = () => {
     let total = 0;
+    
     uniqueBooks.map((book: any) => {
       total += book.price * book.quantity;
     });
@@ -66,8 +71,15 @@ const Cart = () => {
 
     console.log(filteredBooks);
 
+    const _books: any = [];
+    filteredBooks.map((book: any) => {
+      for (let i = 0; i < book.quantity; i++) {
+        _books.push(book);
+      }
+    })
+
     setUniqueBooks(filteredBooks);
-    dispatch(setBooks(filteredBooks));
+    dispatch(setBooks(_books));
 
     reCalculateTotal();
   }
