@@ -6,6 +6,7 @@ export default function BookCheckout({
   price,
   quantity,
   changeQuantity,
+  removeBook
 }: any) {
   return (
     <div key={'KEY_' + key}>
@@ -39,6 +40,9 @@ export default function BookCheckout({
                 <option value="5">5</option>
               </select>
             </div>
+          </div>
+          <div className="w-2 cursor-pointer" onClick={() => {removeBook(title)}}>
+            X
           </div>
         </div>
       </div>

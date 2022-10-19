@@ -60,6 +60,18 @@ const Cart = () => {
     reCalculateTotal();
   }
 
+  const removeBook = (title: string) => {
+
+    const filteredBooks = uniqueBooks.filter((book: any) => book.title !== title);
+
+    console.log(filteredBooks);
+
+    setUniqueBooks(filteredBooks);
+    dispatch(setBooks(filteredBooks));
+
+    reCalculateTotal();
+  }
+
   return (
     <>
       <div className="w-fit m-auto pt-12">
@@ -77,6 +89,7 @@ const Cart = () => {
               price={book.price}
               quantity={book.quantity}
               changeQuantity={changeQuantity}
+              removeBook={removeBook}
             />
           ))}
         </div>
