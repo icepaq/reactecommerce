@@ -3,13 +3,14 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 import CartWrapper from './routes/CartWrapper';
 import ProductsWrapper from "./routes/ProductsWrapper";
 import BookWrapper from "./routes/BookWrapper";
+import HomeWrapper from "./routes/HomeWrapper";
 
 export default function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<ProductsWrapper />} />
+          <Route index element={<HomeWrapper />} />
           <Route path="checkout" element={<CartWrapper />} />
           <Route path="product" element={<ProductsWrapper />} />
           <Route path="*" element={<NoMatch />} />
@@ -56,7 +57,7 @@ function Layout() {
               </li>
               <li className="nav-item">
                 <div className="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out">
-                  <Link to={"/product"}>Product</Link>
+                  <Link to={"/product"}>Products</Link>
                 </div>
               </li>
               <li className="nav-item">
