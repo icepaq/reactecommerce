@@ -39,7 +39,6 @@ const Cart = () => {
   };
 
   const changeQuantity = (title: string, quantity: number) => {
-    console.log(title, quantity);
 
     const _uniqueBooks = uniqueBooks;
     let found = _uniqueBooks.find((b: any) => b.title === title);
